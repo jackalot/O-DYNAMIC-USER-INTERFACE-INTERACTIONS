@@ -13,5 +13,4 @@ module.exports = {
   rules: {
     'no-console': 'off',
   },
-  mode: 'development',
 };
