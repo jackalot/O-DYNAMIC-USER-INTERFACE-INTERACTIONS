@@ -9,18 +9,32 @@ function createDropdown(parent, labelText, options) {
   createLabel();
   function createDropDownButton() {
     const dropDownButton = document.createElement('button');
+    const split = labelText.split(' ');
+    const joined = split.join('-');
+    dropDownButton.id = `${joined}-dropDownButton`;
     dropDownButton.setAttribute('name', labelText);
     dropDownButton.textContent = 'dropdown';
     parent.appendChild(dropDownButton);
   }
   createDropDownButton();
+  function changeDropDownSelection(newValue) {
+    const split = labelText.split(' ');
+    const joined = split.join('-');
+    const dropDownButton = document.querySelector(`#${joined}-dropDownButton`);
+    dropDownButton.textContent = newValue;
+  }
   function createOptions() {
     const optionsDiv = document.createElement('div');
+
     for (let i = 0; i < options.length; i++) {
       const newSelection = document.createElement('button');
       newSelection.textContent = options[i];
       newSelection.classList.add('dropDown-Options');
       optionsDiv.appendChild(newSelection);
+      newSelection.addEventListener('click', () => {
+        newSelection.classList.add('currently-Selected');
+        changeDropDownSelection(options[i]);
+      });
     }
     parent.appendChild(optionsDiv);
   }
