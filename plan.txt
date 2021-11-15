@@ -1,0 +1,14 @@
+Current Focus, createDropdown needs to create a dropdown and place it in the dom:
+* the first paramater is for the parent of the dropdown
+* the second will be label Text
+* one of the paramaters has to be an array of options
+* it will first create a label
+function createDropdown(parent, labelText, [options]) {
+ let x = document.createElement("LABEL");
+ let t = document.createTextNode("Male");
+ x.setAttribute("for", "male");
+ x.appendChild(t);
+ parent.appendChild(x); 
+  console.log('creating dropdown');
+}
+export default createDropdown;
