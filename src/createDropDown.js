@@ -1,4 +1,5 @@
 function createDropdown(parent, labelText, options) {
+//  creates the label and the text for the label
   function createLabel() {
     const x = document.createElement('LABEL');
     const t = document.createTextNode(labelText);
@@ -8,6 +9,7 @@ function createDropdown(parent, labelText, options) {
   }
   createLabel();
   function createDropDownButton() {
+    //  creates the dropdown button, gives it an id, and appends it
     const dropDownButton = document.createElement('button');
     const split = labelText.split(' ');
     const joined = split.join('-');
@@ -18,12 +20,15 @@ function createDropdown(parent, labelText, options) {
   }
   createDropDownButton();
   function changeDropDownSelection(newValue) {
+    //  changes the current dropdown selection according to which button clicks it
     const split = labelText.split(' ');
     const joined = split.join('-');
     const dropDownButton = document.querySelector(`#${joined}-dropDownButton`);
     dropDownButton.textContent = newValue;
   }
   function createOptions() {
+    //    creates the options for the dropdown and makes it so that each option has a button that
+    //    calls changeDropDownSelection with their value.
     const optionsDiv = document.createElement('div');
 
     for (let i = 0; i < options.length; i++) {
