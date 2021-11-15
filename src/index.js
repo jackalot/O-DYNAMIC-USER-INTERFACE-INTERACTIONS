@@ -1,3 +1,4 @@
 import createDropdown from './createDropDown';
 
-createDropdown();
+const body = document.querySelector('body');
+createDropdown(body, 'this is a label', ['option 1', 'option2']);

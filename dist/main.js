@@ -16,7 +16,7 @@
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createDropdown() {\n  console.log('creating dropdown');\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createDropdown);\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/createDropDown.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createDropdown(parent, labelText, [options]) {\n  const x = document.createElement('LABEL');\n  const t = document.createTextNode(labelText);\n  x.setAttribute('for', labelText);\n  x.appendChild(t);\n  parent.appendChild(x);\n  console.log('creating dropdown');\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createDropdown);\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/createDropDown.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createDropDown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createDropDown */ \"./src/createDropDown.js\");\n\n\n(0,_createDropDown__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createDropDown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createDropDown */ \"./src/createDropDown.js\");\n\n\nconst body = document.querySelector('body');\n(0,_createDropDown__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(body, 'this is a label', ['option 1', 'option2']);\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/index.js?");
 
 /***/ })
 
