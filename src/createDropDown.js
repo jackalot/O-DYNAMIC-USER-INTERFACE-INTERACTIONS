@@ -7,11 +7,14 @@ function createDropdown(parent, labelText, options) {
     parent.appendChild(x);
   }
   createLabel();
-  function finishDropdown() {
+  function createDropDownButton() {
     const dropDownButton = document.createElement('button');
     dropDownButton.setAttribute('name', labelText);
     dropDownButton.textContent = 'dropdown';
     parent.appendChild(dropDownButton);
+  }
+  createDropDownButton();
+  function createOptions() {
     const optionsDiv = document.createElement('div');
     for (let i = 0; i < options.length; i++) {
       const newSelection = document.createElement('button');
@@ -20,6 +23,6 @@ function createDropdown(parent, labelText, options) {
     }
     parent.appendChild(optionsDiv);
   }
-  finishDropdown();
+  createOptions();
 }
 export default createDropdown;
