@@ -19,6 +19,7 @@ function createDropdown(parent, labelText, options) {
     for (let i = 0; i < options.length; i++) {
       const newSelection = document.createElement('button');
       newSelection.textContent = options[i];
+      newSelection.classList.add('dropDown-Options');
       optionsDiv.appendChild(newSelection);
     }
     parent.appendChild(optionsDiv);
