@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createDropDown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createDropDown */ \"./src/createDropDown.js\");\n\n\nconst body = document.querySelector('body');\n(0,_createDropDown__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(body, 'this is a label', ['option1', 'option2']);\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createDropDown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createDropDown */ \"./src/createDropDown.js\");\n\n\nconst body = document.querySelector('body');\nconst dropdownDiv = document.createElement('div');\nbody.appendChild(dropdownDiv);\ndropdownDiv.id = 'dropdown-div';\n(0,_createDropDown__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(dropdownDiv, 'this is a label', ['option1', 'option2']);\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/index.js?");
 
 /***/ })
 
