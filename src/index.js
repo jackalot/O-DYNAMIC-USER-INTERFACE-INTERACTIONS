@@ -1,4 +1,7 @@
 import createDropdown from './createDropDown';
 
 const body = document.querySelector('body');
-createDropdown(body, 'this is a label', ['option1', 'option2']);
+const dropdownDiv = document.createElement('div');
+body.appendChild(dropdownDiv);
+dropdownDiv.id = 'dropdown-div';
+createDropdown(dropdownDiv, 'this is a label', ['option1', 'option2']);
