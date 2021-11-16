@@ -1,5 +1,5 @@
 {
-  "name": "o-dynamic-user-interface-interactions",
+  "name": "dropdown",
   "version": "1.0.0",
   "description": "This will contain some basic interactivity like dropdowns, mobile menus, and a slide show that automatically moves to the next slide.",
   "private": false,
@@ -27,5 +27,7 @@
   "bugs": {
     "url": "https://github.com/jackalot/O-DYNAMIC-USER-INTERFACE-INTERACTIONS/issues"
   },
-  "homepage": "https://github.com/jackalot/O-DYNAMIC-USER-INTERFACE-INTERACTIONS#readme"
+  "homepage": "https://github.com/jackalot/O-DYNAMIC-USER-INTERFACE-INTERACTIONS#readme",
+  "main": ".eslintrc.js",
+  "keywords": []
 }
