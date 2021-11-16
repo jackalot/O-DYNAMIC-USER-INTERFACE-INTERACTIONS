@@ -10,6 +10,14 @@ function createDropdown(parent, labelText, options) {
     parent.appendChild(x);
   }
   createLabel();
+  function displayOrHideOptionsDiv() {
+    const optionsDiv = document.querySelector(`#${joined}-optionsDiv`);
+    if (optionsDiv.style.display === 'block') {
+      optionsDiv.style.display = 'none';
+    } else {
+      optionsDiv.style.display = 'block';
+    }
+  }
   function createDropDownButton() {
     //  creates the dropdown button, gives it an id, and appends it
     const dropDownButton = document.createElement('button');
@@ -17,6 +25,7 @@ function createDropdown(parent, labelText, options) {
     dropDownButton.setAttribute('name', labelText);
     dropDownButton.textContent = 'dropdown';
     parent.appendChild(dropDownButton);
+    dropDownButton.addEventListener('click', displayOrHideOptionsDiv);
   }
   createDropDownButton();
   function createOptionsDiv() {
