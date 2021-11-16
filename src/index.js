@@ -4,4 +4,4 @@ const body = document.querySelector('body');
 const dropdownDiv = document.createElement('div');
 body.appendChild(dropdownDiv);
 dropdownDiv.id = 'dropdown-div';
-createDropdown(dropdownDiv, 'this is a label', ['option1', 'option2']);
+createDropdown(dropdownDiv, 'Drop Down with options ', ['option1', 'option2']);

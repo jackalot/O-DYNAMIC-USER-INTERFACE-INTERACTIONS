@@ -18,7 +18,6 @@ function createDropdown(parent, labelText, options) {
       optionsDiv.style.display = 'block';
     }
   }
-  displayOrHideOptionsDiv();
   function createDropDownButton() {
     //  creates the dropdown button, gives it an id, and appends it
     const dropDownButton = document.createElement('button');
@@ -31,6 +30,7 @@ function createDropdown(parent, labelText, options) {
   createDropDownButton();
   function createOptionsDiv() {
     const optionsDiv = document.createElement('div');
+    optionsDiv.style.display = 'none';
     optionsDiv.id = `${joined}-optionsDiv`;
     parent.appendChild(optionsDiv);
     console.log(`#${joined}-optionsDiv`);
