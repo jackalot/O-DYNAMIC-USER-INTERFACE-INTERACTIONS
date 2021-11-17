@@ -60,8 +60,5 @@ function createDropdown(parent, labelText, options) {
     }
     createOptions();
   }
-  export default createDropdown;
-  exports.printMsg = function () {
-    console.log('this is a message from the demo package');
-  };
+  module.exports = createDropdown
   

@@ -1,0 +1,22 @@
+{
+  "name": "createdropdown.js",
+  "version": "1.0.0",
+  "description": "will create dropdowns",
+  "main": "index.js",
+  "scripts": {
+    "test": "createdropdown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackalot/O-DYNAMIC-USER-INTERFACE-INTERACTIONS.git"
+  },
+  "keywords": [
+    "dropdown"
+  ],
+  "author": "jackalot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackalot/O-DYNAMIC-USER-INTERFACE-INTERACTIONS/issues"
+  },
+  "homepage": "https://github.com/jackalot/O-DYNAMIC-USER-INTERFACE-INTERACTIONS#readme"
+}
