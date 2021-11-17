@@ -1,1 +1,0 @@
-This will contain some basic interactivity like dropdowns, mobile menus, and a slide show that automatically moves to the next slide.
