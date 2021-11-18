@@ -12,10 +12,10 @@ function createDropdown(parent, labelText, options) {
   createLabel();
   function displayOrHideOptionsDiv() {
     const optionsDiv = document.querySelector(`#${joined}-optionsDiv`);
-    if (optionsDiv.style.display === 'block') {
+    if (optionsDiv.style.display === 'flex' || optionsDiv.style.display === 'block') {
       optionsDiv.style.display = 'none';
     } else {
-      optionsDiv.style.display = 'block';
+      optionsDiv.setAttribute('style', 'flex');
     }
   }
   function createDropDownButton() {
@@ -32,6 +32,7 @@ function createDropdown(parent, labelText, options) {
     const optionsDiv = document.createElement('div');
     optionsDiv.style.display = 'none';
     optionsDiv.id = `${joined}-optionsDiv`;
+    optionsDiv.classList.add('dropDown-Options');
     parent.appendChild(optionsDiv);
     console.log(`#${joined}-optionsDiv`);
   }
@@ -49,7 +50,6 @@ function createDropdown(parent, labelText, options) {
     for (let i = 0; i < options.length; i++) {
       const newSelection = document.createElement('button');
       newSelection.textContent = options[i];
-      newSelection.classList.add('dropDown-Options');
       optionsDiv.appendChild(newSelection);
       newSelection.addEventListener('click', () => {
         newSelection.classList.add('currently-Selected');
