@@ -40,7 +40,7 @@ function createDropdown(parent, labelText, options) {
   function changeDropDownSelection(newValue) {
     //  changes the current dropdown selection according to which button clicks it
     const dropDownButton = document.querySelector(`#${joined}-dropDownButton`);
-    dropDownButton.textContent = newValue;
+    dropDownButton.textContent = `${newValue} has been selected`;
   }
   function createOptions() {
     //    creates the options for the dropdown and makes it so that each option has a button that
