@@ -1,7 +1,10 @@
-.dropDown-Options {
+.dropDown-Options-div {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
     background-color: green;
+}
+.dropDown-Options {
+    background: red;
 }
