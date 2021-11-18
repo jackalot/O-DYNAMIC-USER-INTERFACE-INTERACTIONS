@@ -12,10 +12,10 @@ function createDropdown(parent, labelText, options) {
   createLabel();
   function displayOrHideOptionsDiv() {
     const optionsDiv = document.querySelector(`#${joined}-optionsDiv`);
-    if (optionsDiv.style.display === 'flex' || optionsDiv.style.display === 'block') {
-      optionsDiv.style.display = 'none';
+    if (optionsDiv.style.visibility === 'visible') {
+      optionsDiv.style.visibility = 'hidden';
     } else {
-      optionsDiv.setAttribute('style', 'flex');
+      optionsDiv.style.visibility = 'visible';
     }
   }
   function createDropDownButton() {
@@ -30,7 +30,7 @@ function createDropdown(parent, labelText, options) {
   createDropDownButton();
   function createOptionsDiv() {
     const optionsDiv = document.createElement('div');
-    optionsDiv.style.display = 'none';
+    optionsDiv.style.visibility = 'hidden';
     optionsDiv.id = `${joined}-optionsDiv`;
     optionsDiv.classList.add('dropDown-Options');
     parent.appendChild(optionsDiv);
