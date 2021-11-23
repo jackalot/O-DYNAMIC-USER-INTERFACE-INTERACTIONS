@@ -1,7 +1,8 @@
 Current Focus, createSlideShow needs to create a slide show:
 - the first paramater will be the parent where the slideshow will be appended to
 - the second parameter will be an array of strings that point to where each image is for this slideshow
-
+- make a slideShow Div and give it the class of 'slideshow' so that we can widen it within css.
+- append the new div to the parent.
 psuedo script:
 createSlideShow(parent, imagesArray)
 {
