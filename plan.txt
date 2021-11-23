@@ -1,1 +1,9 @@
 Current Focus, createSlideShow needs to create a slide show:
+- the first paramater will be the parent where the slideshow will be appended to
+- the second parameter will be an array of strings that point to where each image is for this slideshow
+
+psuedo script:
+createSlideShow(parent, imagesArray)
+{
+
+}
