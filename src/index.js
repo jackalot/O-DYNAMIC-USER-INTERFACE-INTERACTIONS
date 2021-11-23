@@ -1,4 +1,5 @@
 import createDropdown from './createDropDown';
+import createSlideShow from './createSlideShow';
 import './index.css';
 
 const body = document.querySelector('body');
@@ -9,3 +10,4 @@ createDropdown(dropdownDiv, 'Drop Down with options ', ['option1', 'option2', 'o
 const slideshowContainerDiv = document.createElement('div');
 body.appendChild(slideshowContainerDiv);
 slideshowContainerDiv.id = 'slideshowContainer-div';
+createSlideShow(slideshowContainerDiv, ['text']);
