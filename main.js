@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createSlideShow(parent, imagesArray) {\n  const slideShowDiv = document.createElement('div');\n  slideShowDiv.classList.add('slideshow');\n  parent.append(slideShowDiv);\n  function addImagesToSlideshow() {\n    for (let i = 0; i < imagesArray.length; i++) {\n      const newImage = new Image();\n      newImage.src = imagesArray[i];\n      slideShowDiv.append(newImage);\n    }\n  }\n  addImagesToSlideshow();\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createSlideShow);\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/createSlideShow.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createSlideShow(parent, imagesArray) {\n  const slideShowDiv = document.createElement('div');\n  slideShowDiv.classList.add('slideshow');\n  parent.append(slideShowDiv);\n  function addImagesToSlideshow() {\n    for (let i = 0; i < imagesArray.length; i++) {\n      const newImage = new Image(150, 250);\n      newImage.src = imagesArray[i];\n      slideShowDiv.append(newImage);\n    }\n  }\n  addImagesToSlideshow();\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createSlideShow);\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/createSlideShow.js?");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createDropDown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createDropDown */ \"./src/createDropDown.js\");\n/* harmony import */ var _createSlideShow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createSlideShow */ \"./src/createSlideShow.js\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _images_grilledcheese_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/grilledcheese.jpg */ \"./src/images/grilledcheese.jpg\");\n\n\n\n\n\nconst body = document.querySelector('body');\nconst dropdownDiv = document.createElement('div');\nbody.appendChild(dropdownDiv);\ndropdownDiv.id = 'dropdown-div';\n(0,_createDropDown__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(dropdownDiv, 'Drop Down with options ', ['option1', 'option2', 'option3', 'option4', 'option5', 'option6', 'option7', 'option8']);\nconst slideshowContainerDiv = document.createElement('div');\nbody.appendChild(slideshowContainerDiv);\nslideshowContainerDiv.id = 'slideshowContainer-div';\nconsole.log(_images_grilledcheese_jpg__WEBPACK_IMPORTED_MODULE_3__);\n(0,_createSlideShow__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(slideshowContainerDiv, [_images_grilledcheese_jpg__WEBPACK_IMPORTED_MODULE_3__]);\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createDropDown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createDropDown */ \"./src/createDropDown.js\");\n/* harmony import */ var _createSlideShow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createSlideShow */ \"./src/createSlideShow.js\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _images_grilledcheese_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./images/grilledcheese.jpg */ \"./src/images/grilledcheese.jpg\");\n/* harmony import */ var _images_grilledcheese2_jpeg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./images/grilledcheese2.jpeg */ \"./src/images/grilledcheese2.jpeg\");\n/* harmony import */ var _images_grilledcheese3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./images/grilledcheese3.jpg */ \"./src/images/grilledcheese3.jpg\");\n\n\n\n\n\n\n\nconst body = document.querySelector('body');\nconst dropdownDiv = document.createElement('div');\nbody.appendChild(dropdownDiv);\ndropdownDiv.id = 'dropdown-div';\n(0,_createDropDown__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(dropdownDiv, 'Drop Down with options ', ['option1', 'option2', 'option3', 'option4', 'option5', 'option6', 'option7', 'option8']);\nconst slideshowContainerDiv = document.createElement('div');\nbody.appendChild(slideshowContainerDiv);\nslideshowContainerDiv.id = 'slideshowContainer-div';\nconsole.log(_images_grilledcheese_jpg__WEBPACK_IMPORTED_MODULE_3__);\n(0,_createSlideShow__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(slideshowContainerDiv, [_images_grilledcheese_jpg__WEBPACK_IMPORTED_MODULE_3__, _images_grilledcheese2_jpeg__WEBPACK_IMPORTED_MODULE_4__, _images_grilledcheese3_jpg__WEBPACK_IMPORTED_MODULE_5__]);\n\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/index.js?");
 
 /***/ }),
 
@@ -147,6 +147,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cre
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"37e468261cfe6d308092.jpg\";\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/images/grilledcheese.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/grilledcheese2.jpeg":
+/*!****************************************!*\
+  !*** ./src/images/grilledcheese2.jpeg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b2158d5ade82f0bbe1a3.jpeg\";\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/images/grilledcheese2.jpeg?");
+
+/***/ }),
+
+/***/ "./src/images/grilledcheese3.jpg":
+/*!***************************************!*\
+  !*** ./src/images/grilledcheese3.jpg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"9183ec7dc65b821a7a19.jpg\";\n\n//# sourceURL=webpack://o-dynamic-user-interface-interactions/./src/images/grilledcheese3.jpg?");
 
 /***/ })
 
