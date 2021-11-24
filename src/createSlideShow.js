@@ -4,7 +4,7 @@ function createSlideShow(parent, imagesArray) {
   parent.append(slideShowDiv);
   function addImagesToSlideshow() {
     for (let i = 0; i < imagesArray.length; i++) {
-      const newImage = new Image();
+      const newImage = new Image(150, 250);
       newImage.src = imagesArray[i];
       slideShowDiv.append(newImage);
     }
