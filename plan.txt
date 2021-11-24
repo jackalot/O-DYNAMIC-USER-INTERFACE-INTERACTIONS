@@ -3,10 +3,19 @@ Current Focus, createSlideShow needs to create a slide show:
 - the second parameter will be an array of strings that point to where each image is for this slideshow
 - make a slideShow Div and give it the class of 'slideshow' so that we can widen it within css.
 - append the new div to the parent.
+- another function inside it will handle making the imagesArray add images to the slideShowDiv, called addImagesToSlideshow
 psuedo script:
 createSlideShow(parent, imagesArray)
 {
     const slideShowDiv = document.createElement('div');
     slideShowDiv.classList.add('slideshow');
     parent.append(slideShowDiv); 
+    function addImagesToSlideshow () {
+        for(let i = 0; i < imagesArray.length; i++)
+        {
+            const newImage = document.createElement('img');
+            newImage.src = imagesArray[i];
+            slideShowDiv.append(newImage);
+        }
+    }
 }
