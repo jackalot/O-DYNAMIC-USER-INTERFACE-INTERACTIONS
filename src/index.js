@@ -13,5 +13,4 @@ createDropdown(dropdownDiv, 'Drop Down with options ', ['option1', 'option2', 'o
 const slideshowContainerDiv = document.createElement('div');
 body.appendChild(slideshowContainerDiv);
 slideshowContainerDiv.id = 'slideshowContainer-div';
-console.log(picture1);
 createSlideShow(slideshowContainerDiv, [picture1, picture2, picture3]);
