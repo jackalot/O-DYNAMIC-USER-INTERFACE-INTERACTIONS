@@ -1,6 +1,7 @@
 import createDropdown from './createDropDown';
 import createSlideShow from './createSlideShow';
 import './index.css';
+import picture1 from './images/grilledcheese.jpg';
 
 const body = document.querySelector('body');
 const dropdownDiv = document.createElement('div');
@@ -10,4 +11,5 @@ createDropdown(dropdownDiv, 'Drop Down with options ', ['option1', 'option2', 'o
 const slideshowContainerDiv = document.createElement('div');
 body.appendChild(slideshowContainerDiv);
 slideshowContainerDiv.id = 'slideshowContainer-div';
-createSlideShow(slideshowContainerDiv, ['grilledcheese.jpg']);
+console.log(picture1);
+createSlideShow(slideshowContainerDiv, [picture1]);
