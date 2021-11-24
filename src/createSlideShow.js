@@ -10,5 +10,13 @@ function createSlideShow(parent, imagesArray) {
     }
   }
   addImagesToSlideshow();
+  const findMiddle = (arr, ind = 0) => {
+    if (arr[ind]) {
+      return findMiddle(arr, ++ind);
+    }
+    return ind % 2 !== 0 ? [arr[(ind - 1) / 2]] : [arr[(ind / 2) - 1],
+      arr[ind / 2]];
+  };
+  console.log(findMiddle(imagesArray));
 }
 export default createSlideShow;
