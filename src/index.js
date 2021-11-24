@@ -10,4 +10,4 @@ createDropdown(dropdownDiv, 'Drop Down with options ', ['option1', 'option2', 'o
 const slideshowContainerDiv = document.createElement('div');
 body.appendChild(slideshowContainerDiv);
 slideshowContainerDiv.id = 'slideshowContainer-div';
-createSlideShow(slideshowContainerDiv, ['text']);
+createSlideShow(slideshowContainerDiv, ['./images/grilledcheese.jpg']);
