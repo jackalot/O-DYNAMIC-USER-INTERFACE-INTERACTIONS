@@ -8,6 +8,8 @@ function createSlideShow(parent, imagesArray) {
     }
     return array[Math.floor(i / 2)];
   }
+  //  if we need this function later use it, for now the statements
+  //   work but the function itself doesnt
   function displayOrHideImage(image) {
     if (image.style.visibility === 'visible') {
       image.style.visibility = 'hidden';
