@@ -1,21 +1,21 @@
-Current Focus, createSlideShow needs to create a slide show:
-- the first paramater will be the parent where the slideshow will be appended to
-- the second parameter will be an array of strings that point to where each image is for this slideshow
-- make a slideShow Div and give it the class of 'slideshow' so that we can widen it within css.
-- append the new div to the parent.
-- another function inside it will handle making the imagesArray add images to the slideShowDiv, called addImagesToSlideshow
+Current Focus, make the slideshow go to the right:
+- first a new function is added called addSlideRightButton
 psuedo script:
-createSlideShow(parent, imagesArray)
-{
-    const slideShowDiv = document.createElement('div');
-    slideShowDiv.classList.add('slideshow');
-    parent.append(slideShowDiv); 
-    function addImagesToSlideshow () {
-        for(let i = 0; i < imagesArray.length; i++)
-        {
-            const newImage = document.createElement('img');
-            newImage.src = imagesArray[i];
-            slideShowDiv.append(newImage);
-        }
+//existing addImagesToSlideshow for demonstration purposes
+function addImagesToSlideshow() {
+    const middleElement = findMiddle(0, imagesArray);
+    const middleNumber = imagesArray.indexOf(middleElement);
+    for (let i = 0; i < imagesArray.length; i++) {
+      const newImage = new Image(150, 250);
+      newImage.src = imagesArray[i];
+      slideShowDiv.append(newImage);
+      if (i !== middleNumber) {
+        newImage.style.visibility = 'hidden';
+      }
     }
-}
+  }
+  addImagesToSlideshow();
+  function addSlideRightButton()
+  {
+      
+  }
