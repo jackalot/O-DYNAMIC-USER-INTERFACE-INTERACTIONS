@@ -8,6 +8,13 @@ function createSlideShow(parent, imagesArray) {
     }
     return array[Math.floor(i / 2)];
   }
+  function displayOrHideImage(image) {
+    if (image.style.visibility === 'visible') {
+      image.style.visibility = 'hidden';
+    } else {
+      image.style.visibility = 'visible';
+    }
+  }
   function addImagesToSlideshow() {
     const middleElement = findMiddle(0, imagesArray);
     const middleNumber = imagesArray.indexOf(middleElement);
@@ -15,8 +22,8 @@ function createSlideShow(parent, imagesArray) {
       const newImage = new Image(150, 250);
       newImage.src = imagesArray[i];
       slideShowDiv.append(newImage);
-      if (i === middleNumber) {
-        console.log('hi');
+      if (i !== middleNumber) {
+        newImage.style.visibility = 'hidden';
       }
     }
   }
