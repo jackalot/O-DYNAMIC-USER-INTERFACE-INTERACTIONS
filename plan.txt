@@ -24,4 +24,8 @@ function addImagesToSlideshow() {
       const slideShowButtonRight = document.createElement('button');
     const middleElement = findMiddle(0, imagesArray);
      const middleNumber = imagesArray.indexOf(middleElement);
+     const leftHalf = imagesArray.slice(0, middleNumber);
+     const rightHalf = imagesArray.slice(middleNumber + 1, imagesArray.length);
+     const closestLeft = leftHalf[leftHalf.length - 1];
+     const closestRight = rightHalf[0];
   }
