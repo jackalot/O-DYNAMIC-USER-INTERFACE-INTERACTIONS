@@ -1,5 +1,9 @@
 Current Focus, make the slideshow go to the right:
-- first a new function is added called addSlideRightButton
+* first a new function is added called addSlideRightButton
+- make a new button called slideShowButtonRight
+- find the middle element of the imagesArray
+- use that to slice everything to the left of the middle and to the right
+- find the closest index to the middle (that isnt the middle) and put a button on it
 psuedo script:
 //existing addImagesToSlideshow for demonstration purposes
 function addImagesToSlideshow() {
