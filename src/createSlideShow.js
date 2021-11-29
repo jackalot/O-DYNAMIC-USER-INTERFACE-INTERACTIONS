@@ -9,7 +9,6 @@ function createSlideShow(parent, imagesArray) {
     return array[Math.floor(i / 2)];
   }
   function addImagesToSlideshow() {
-    // console.log(findMiddle(imagesArray));
     const middleElement = findMiddle(0, imagesArray);
     const middleNumber = imagesArray.indexOf(middleElement);
     for (let i = 0; i < imagesArray.length; i++) {
