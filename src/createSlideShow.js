@@ -2,16 +2,16 @@ function createSlideShow(parent, imagesArray) {
   const slideShowDiv = document.createElement('div');
   slideShowDiv.classList.add('slideshow');
   parent.append(slideShowDiv);
-  const findMiddle = (arr, ind = 0) => {
-    if (arr[ind]) {
-      return findMiddle(arr, ++ind);
+  function findMiddle(i, array) {
+    if (array[i] !== undefined) {
+      return findMiddle(i + 1, array);
     }
-    return ind % 2 !== 0 ? [arr[(ind - 1) / 2]] : [arr[(ind / 2) - 1],
-      arr[ind / 2]];
-  };
+    return array[Math.floor(i / 2)];
+  }
   function addImagesToSlideshow() {
-    const middleElement = findMiddle(imagesArray);
-    const middleNumber = imagesArray.indexOf(middleElement.src);
+    // console.log(findMiddle(imagesArray));
+    const middleElement = findMiddle(0, imagesArray);
+    const middleNumber = imagesArray.indexOf(middleElement);
     console.log(`middleElement is: ${middleElement}`);
     console.log(`middleNumber is ${middleNumber}`);
     for (let i = 0; i < imagesArray.length; i++) {
