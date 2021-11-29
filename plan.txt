@@ -1,4 +1,4 @@
-Current Focus, make the slideshow go to the right:
+Current Focus, make the slideshow add the "got ot he right" button:
 * first a new function is added called addSlideRightButton
 - make a new button called slideShowButtonRight
 - find the middle element of the imagesArray
