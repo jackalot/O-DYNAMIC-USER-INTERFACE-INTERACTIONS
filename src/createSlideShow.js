@@ -8,6 +8,20 @@ function createSlideShow(parent, imagesArray) {
     }
     return array[Math.floor(i / 2)];
   }
+  function addSlideLeftButton() {
+    const slideShowButtonLeft = document.createElement('button');
+    const middleElement = findMiddle(0, imagesArray);
+    const middleNumber = imagesArray.indexOf(middleElement);
+    const leftHalf = imagesArray.slice(0, middleNumber);
+    const closestLeft = leftHalf[leftHalf.length - 1];
+    console.log(`closest left is ${closestLeft}`);
+    slideShowDiv.append(slideShowButtonLeft);
+    slideShowButtonLeft.textContent = 'Slide left';
+    slideShowButtonLeft.addEventListener('click', () => {
+      console.log('click');
+    });
+  }
+  addSlideLeftButton();
   //  if we need this function later use it, for now the statements
   //   work but the function itself doesnt
   function displayOrHideImage(image) {
@@ -35,11 +49,8 @@ function createSlideShow(parent, imagesArray) {
     const slideShowButtonRight = document.createElement('button');
     const middleElement = findMiddle(0, imagesArray);
     const middleNumber = imagesArray.indexOf(middleElement);
-    const leftHalf = imagesArray.slice(0, middleNumber);
     const rightHalf = imagesArray.slice(middleNumber + 1, imagesArray.length);
-    const closestLeft = leftHalf[leftHalf.length - 1];
     const closestRight = rightHalf[0];
-    console.log(`closest left is ${closestLeft}`);
     console.log(`closest right is ${closestRight}`);
     slideShowDiv.append(slideShowButtonRight);
     slideShowButtonRight.textContent = 'Slide right';
