@@ -22,6 +22,7 @@ function createSlideShow(parent, imagesArray) {
     const middleNumber = imagesArray.indexOf(middleElement);
     for (let i = 0; i < imagesArray.length; i++) {
       const newImage = new Image(150, 250);
+      newImage.id = `image-${i}`;
       newImage.src = imagesArray[i];
       slideShowDiv.append(newImage);
       if (i !== middleNumber) {
@@ -30,5 +31,22 @@ function createSlideShow(parent, imagesArray) {
     }
   }
   addImagesToSlideshow();
+  function addSlideRightButton() {
+    const slideShowButtonRight = document.createElement('button');
+    const middleElement = findMiddle(0, imagesArray);
+    const middleNumber = imagesArray.indexOf(middleElement);
+    const leftHalf = imagesArray.slice(0, middleNumber);
+    const rightHalf = imagesArray.slice(middleNumber + 1, imagesArray.length);
+    const closestLeft = leftHalf[leftHalf.length - 1];
+    const closestRight = rightHalf[0];
+    console.log(`closest left is ${closestLeft}`);
+    console.log(`closest right is ${closestRight}`);
+    slideShowDiv.append(slideShowButtonRight);
+    slideShowButtonRight.textContent = 'Slide right';
+    slideShowButtonRight.addEventListener('click', () => {
+      console.log('click');
+    });
+  }
+  addSlideRightButton();
 }
 export default createSlideShow;
