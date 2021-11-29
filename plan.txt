@@ -17,5 +17,7 @@ function addImagesToSlideshow() {
   addImagesToSlideshow();
   function addSlideRightButton()
   {
-      
+      const slideShowButtonRight = document.createElement('button');
+    const middleElement = findMiddle(0, imagesArray);
+     const middleNumber = imagesArray.indexOf(middleElement);
   }
