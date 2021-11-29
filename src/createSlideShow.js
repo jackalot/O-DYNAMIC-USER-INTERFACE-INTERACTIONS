@@ -12,13 +12,10 @@ function createSlideShow(parent, imagesArray) {
     // console.log(findMiddle(imagesArray));
     const middleElement = findMiddle(0, imagesArray);
     const middleNumber = imagesArray.indexOf(middleElement);
-    console.log(`middleElement is: ${middleElement}`);
-    console.log(`middleNumber is ${middleNumber}`);
     for (let i = 0; i < imagesArray.length; i++) {
       const newImage = new Image(150, 250);
       newImage.src = imagesArray[i];
       slideShowDiv.append(newImage);
-      console.log(`the current images array is ${imagesArray[i]}`);
       if (i === middleNumber) {
         console.log('hi');
       }
