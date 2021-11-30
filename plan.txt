@@ -22,3 +22,12 @@ function addImagesToSlideshow() {
     }
   }
   addImagesToSlideshow();
+  function slideLeft() {
+    const middleElement = findMiddle(0, imagesArray);
+    const index = imagesArray.indexOf(middleElement);
+    const leftHalf = imagesArray.slice(0, index);
+    const rightHalf = imagesArray.slice(index + 1, imagesArray.length - 1);
+    const lastElement = imagesArray.slice(imagesArray.length - 1, imagesArray.length);
+    const newLeftHalf = lastElement.concat(leftHalf);
+    const newArray = newLeftHalf.concat(oldMiddle, rightHalf);
+  }
