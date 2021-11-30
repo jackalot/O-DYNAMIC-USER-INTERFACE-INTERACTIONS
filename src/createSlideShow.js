@@ -8,6 +8,7 @@ function createSlideShow(parent, imagesArray) {
     }
     return array[Math.floor(i / 2)];
   }
+  // Make a slide left function here
   function addSlideLeftButton() {
     const slideShowButtonLeft = document.createElement('button');
     const middleElement = findMiddle(0, imagesArray);
