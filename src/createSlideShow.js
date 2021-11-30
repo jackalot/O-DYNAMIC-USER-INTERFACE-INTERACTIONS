@@ -12,6 +12,8 @@ function createSlideShow(parent, imagesArray) {
     const middleElement = findMiddle(0, imagesArray);
     const index = imagesArray.indexOf(middleElement);
     const oldMiddle = imagesArray.slice(index, index + 1);
+    const newMiddleElement = document.querySelector(`#image-${index - 1}`);
+    newMiddleElement.style.visibility = 'visible';
     const leftHalf = imagesArray.slice(0, index);
     const rightHalf = imagesArray.slice(index + 1, imagesArray.length - 1);
     const lastElement = imagesArray.slice(imagesArray.length - 1, imagesArray.length);
@@ -19,8 +21,10 @@ function createSlideShow(parent, imagesArray) {
     const newArray = newLeftHalf.concat(oldMiddle, rightHalf);
     // eslint-disable-next-line no-param-reassign
     imagesArray = newArray.slice(0);
-    // eslint-disable-next-line no-use-before-define
-    emptySlideShowDiv();
+    setTimeout(() => {
+      // eslint-disable-next-line no-use-before-define
+      emptySlideShowDiv();
+    }, 100);
   }
   function addSlideLeftButton() {
     const slideShowButtonLeft = document.createElement('button');
@@ -68,13 +72,17 @@ function createSlideShow(parent, imagesArray) {
     let rightHalf = imagesArray.slice(index + 2, imagesArray.length);
     rightHalf = rightHalf.concat(firstItem);
     const newMiddle = imagesArray.slice(index + 1, index + 2);
+    const newMiddleElement = document.querySelector(`#image-${index + 1}`);
+    newMiddleElement.style.visibility = 'visible';
     const element = imagesArray.slice(index, index + 1);
     leftHalf = leftHalf.concat(element);
     const newArray = leftHalf.concat(newMiddle, rightHalf);
     // eslint-disable-next-line no-param-reassign
     imagesArray = newArray.slice(0);
-    // eslint-disable-next-line no-use-before-define
-    emptySlideShowDiv();
+    setTimeout(() => {
+      // eslint-disable-next-line no-use-before-define
+      emptySlideShowDiv();
+    }, 100);
   }
   function addSlideRightButton() {
     const slideShowButtonRight = document.createElement('button');
