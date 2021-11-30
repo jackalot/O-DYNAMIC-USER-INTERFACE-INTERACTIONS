@@ -23,15 +23,15 @@ function addImagesToSlideshow() {
     }
   }
   addImagesToSlideshow();
-  function slideRight(array) {
+  function slideRight() {
      const middleElement = findMiddle(0, imagesArray);
     const index = imagesArray.indexOf(middleElement);
-    let leftHalf = array.slice(1, index);
-    const firstItem = array.slice(0, 1);
-    let rightHalf = array.slice(index + 2, array.length);
+    let leftHalf = imagesArray.slice(1, index);
+    const firstItem = imagesArray.slice(0, 1);
+    let rightHalf = imagesArray.slice(index + 2, imagesArray.length);
     rightHalf = rightHalf.concat(firstItem);
-    const newMiddle = array.slice(index + 1, index + 2);
-    const element = array.slice(index, index + 1);
+    const newMiddle = imagesArray.slice(index + 1, index + 2);
+    const element = imagesArray.slice(index, index + 1);
     leftHalf = leftHalf.concat(element);
     const newArray = leftHalf.concat(newMiddle, rightHalf);
   }
