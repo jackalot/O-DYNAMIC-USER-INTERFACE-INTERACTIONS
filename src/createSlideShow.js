@@ -56,7 +56,10 @@ function createSlideShow(parent, imagesArray) {
     const element = imagesArray.slice(index, index + 1);
     leftHalf = leftHalf.concat(element);
     const newArray = leftHalf.concat(newMiddle, rightHalf);
-    console.log(newArray);
+    // eslint-disable-next-line no-param-reassign
+    imagesArray = newArray.slice(0);
+    // eslint-disable-next-line no-use-before-define
+    emptySlideShowDiv();
   }
   function addSlideRightButton() {
     const slideShowButtonRight = document.createElement('button');
@@ -73,5 +76,15 @@ function createSlideShow(parent, imagesArray) {
     });
   }
   addSlideRightButton();
+  const emptySlideShowDiv = () => {
+    while (slideShowDiv.firstChild) {
+      slideShowDiv.removeChild(slideShowDiv.firstChild);
+    }
+    if (!slideShowDiv.firstChild) {
+      addSlideLeftButton();
+      addImagesToSlideshow();
+      addSlideRightButton();
+    }
+  };
 }
 export default createSlideShow;
