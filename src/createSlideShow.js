@@ -8,7 +8,20 @@ function createSlideShow(parent, imagesArray) {
     }
     return array[Math.floor(i / 2)];
   }
-  // Make a slide left function here
+  function slideLeft() {
+    const middleElement = findMiddle(0, imagesArray);
+    const index = imagesArray.indexOf(middleElement);
+    const oldMiddle = imagesArray.slice(index, index + 1);
+    const leftHalf = imagesArray.slice(0, index);
+    const rightHalf = imagesArray.slice(index + 1, imagesArray.length - 1);
+    const lastElement = imagesArray.slice(imagesArray.length - 1, imagesArray.length);
+    const newLeftHalf = lastElement.concat(leftHalf);
+    const newArray = newLeftHalf.concat(oldMiddle, rightHalf);
+    // eslint-disable-next-line no-param-reassign
+    imagesArray = newArray.slice(0);
+    // eslint-disable-next-line no-use-before-define
+    emptySlideShowDiv();
+  }
   function addSlideLeftButton() {
     const slideShowButtonLeft = document.createElement('button');
     const middleElement = findMiddle(0, imagesArray);
@@ -20,6 +33,7 @@ function createSlideShow(parent, imagesArray) {
     slideShowButtonLeft.textContent = 'Slide left';
     slideShowButtonLeft.addEventListener('click', () => {
       console.log('click');
+      slideLeft();
     });
   }
   addSlideLeftButton();
