@@ -4,6 +4,8 @@ Current Focus, add navigation dots based on the length of the imagesArray:
 - make a for loop with imagesArray.length
   - in the loop, make a button called navigationButton
   - add a class to it.
+  - add an event listener which would call a function that hasnt been made yet
+  - add text content
 psuedo script:
 //existing addImagesToSlideshow for demonstration purposes
 function addImagesToSlideshow() {
