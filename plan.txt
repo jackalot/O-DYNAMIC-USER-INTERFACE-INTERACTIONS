@@ -1,5 +1,9 @@
 Current Focus, add navigation dots based on the length of the imagesArray:
-
+* make a function called addNavigatonDots
+- make a new div called "navigation-div"
+- make a for loop with imagesArray.length
+  - in the loop, make a button called navigationButton
+  - add a class to it.
 psuedo script:
 //existing addImagesToSlideshow for demonstration purposes
 function addImagesToSlideshow() {
@@ -15,4 +19,16 @@ function addImagesToSlideshow() {
     }
   }
   addImagesToSlideshow();
-  
+function addNavigatonDots () {
+  const navigationDiv = document.createElement("div");
+  navigationDiv.classList.add("navigation-div");
+  for(let i = 0; i < imagesArray.length; i++)
+  {
+    const navigationButton = document.createElement("button");
+    navigationDiv.classList.add("navigation-button");
+    navigation.addEventListener("click", ()=> {
+      //call navigation button here
+      console.log("click " + imagesArray[i]);
+    }) 
+  }
+}
