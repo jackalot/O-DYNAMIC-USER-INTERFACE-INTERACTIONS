@@ -99,6 +99,22 @@ function createSlideShow(parent, imagesArray) {
     });
   }
   addSlideRightButton();
+  function addNavigatonDots() {
+    const navigationDiv = document.createElement('div');
+    parent.append(navigationDiv);
+    const copy = imagesArray; //  if this isnt referenced here, event listener gets an error.
+    navigationDiv.classList.add('navigation-div');
+    for (let i = 0; i < copy.length; i++) {
+      const navigationButton = document.createElement('button');
+      navigationButton.classList.add('navigation-button');
+      navigationButton.textContent = `${i}`;
+      navigationButton.addEventListener('click', () => {
+        console.log(`${copy}`);
+      });
+      navigationDiv.append(navigationButton);
+    }
+  }
+  addNavigatonDots();
   const emptySlideShowDiv = () => {
     while (slideShowDiv.firstChild) {
       slideShowDiv.removeChild(slideShowDiv.firstChild);

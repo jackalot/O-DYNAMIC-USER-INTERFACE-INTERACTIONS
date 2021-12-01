@@ -17,3 +17,16 @@
     justify-content: center;
     background-color: green;
 }
+.navigation-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: red;
+}
+.navigation-button {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-self: flex-start;
+   margin: 2px;
+}
