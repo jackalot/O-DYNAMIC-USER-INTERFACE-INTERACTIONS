@@ -1,12 +1,5 @@
-Current Focus, make the slideshow slide left:
-* The same as the right, make a function called slide left
-- get the middle of the imagesArray
-- get the left and right sides of the imagesArray
-- get the last element in the right side
-- put that last element in the beginning of the array
-- transformation looks something like this:
-0, 1, 2, 3, 4, 5, 6
-6, 0, 1, 2, 3, 4, 5
+Current Focus, add navigation dots based on the length of the imagesArray:
+
 psuedo script:
 //existing addImagesToSlideshow for demonstration purposes
 function addImagesToSlideshow() {
@@ -22,13 +15,4 @@ function addImagesToSlideshow() {
     }
   }
   addImagesToSlideshow();
-  function slideLeft() {
-    const middleElement = findMiddle(0, imagesArray);
-    const index = imagesArray.indexOf(middleElement);
-    const oldMiddle = imagesArray.slice(index, index + 1);
-    const leftHalf = imagesArray.slice(0, index);
-    const rightHalf = imagesArray.slice(index + 1, imagesArray.length - 1);
-    const lastElement = imagesArray.slice(imagesArray.length - 1, imagesArray.length);
-    const newLeftHalf = lastElement.concat(leftHalf);
-    const newArray = newLeftHalf.concat(oldMiddle, rightHalf);
-  }
+  
